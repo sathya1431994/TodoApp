@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://todo4yu.herokuapp.com", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/todolist")
 public class TodoController {
 	@Autowired
