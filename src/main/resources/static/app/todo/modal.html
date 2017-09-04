@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3 class="modal-title" style="font-size: 18px;" id="modal-title">Add new task</h3>
+    {{vm.title}}
+</div>
+<div class="modal-body">
+    <br/>
+    <form ng-submit="vm.ok()" name="myForm">
+        <div class="form-group">
+            <label for="inputdefault-task-name">Name</label>
+            <input class="form-control" id="inputdefault-task-name" type="text" data-ng-model="vm.taskName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sel1">Priority</label>
+            <select class="form-control" id="sel1" data-ng-model="vm.taskPriority" required>
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+  </select>
+        </div>
+        <div class="form-group">
+            <label for="inputdefault-task-priority">Status</label>
+            <input class="form-control" data-ng-disabled="true" id="inputdefault-task-priority" type="text" data-ng-model="vm.taskStatus"
+                required>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-danger" type="button" ng-click="vm.cancel()">Cancel</button>
+    <button ng-disabled="myForm.$invalid" class="btn btn-primary" type="button" ng-click="vm.ok()">Submit</button>
+</div>
