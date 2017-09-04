@@ -10,7 +10,7 @@
         };
 
         function getTodo() {
-            return $http.get('https://todo4yu.herokuapp.com/todolist')
+            return $http.get('https://todo4kgfsl.herokuapp.com/todolist')
                 .then(gettodoSuccess)
                 .catch(gettodoFailure);
 
@@ -26,7 +26,7 @@
 
 
         function postTodo(todo) {
-            return $http.post('https://todo4yu.herokuapp.com/todolist', todo)
+            return $http.post('https://todo4kgfsl.herokuapp.com/todolist', todo)
                 .then(posttodoSuccess)
                 .catch(posttodoFailure);
 
@@ -41,7 +41,7 @@
 
 
         function updateTodo(todo, id) {
-            return $http.post('https://todo4yu.herokuapp.com/todolist/' + id, todo)
+            return $http.post('https://todo4kgfsl.herokuapp.com/todolist/' + id, todo)
                 .then(updatetodoSuccess)
                 .catch(updatetodoFailure);
 
