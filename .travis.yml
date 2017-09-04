@@ -6,4 +6,8 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 script: "mvn test"
-
+deploy:
+ provider: heroku
+ api-key: 
+  secure: $HEROKU_API_KEY
+ app: todo4kgfsl
